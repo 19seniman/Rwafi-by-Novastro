@@ -291,8 +291,9 @@ const startCountdown = () => {
         clearInterval(countdownInterval);
     }
 
-    const twentyFourHours = 24 * 60 * 60 * 1000;
-    const nextRun = new Date(new Date().getTime() + twentyFourHours);
+    // Changed interval to 6 hours
+    const sixHours = 6 * 60 * 60 * 1000;
+    const nextRun = new Date(new Date().getTime() + sixHours);
     logger.info(`Next run scheduled for: ${nextRun.toLocaleString()}`);
 
     countdownInterval = setInterval(() => {
@@ -338,11 +339,10 @@ const main = async () => {
     await runTasks(wallets);
     startCountdown();
 
-    // Schedule subsequent runs every 24 hours
     setInterval(async () => {
         await runTasks(wallets);
         startCountdown();
-    }, 24 * 60 * 60 * 1000);
+    }, 6 * 60 * 60 * 1000); 
 };
 
 main().catch(err => {
