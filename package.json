@@ -1,0 +1,31 @@
+{
+  "name": "Rwafi-by-Novastro",
+  "version": "1.0.0",
+  "description": "Novastro Testnet auto",
+  "main": "lim.js",
+  "scripts": {
+    "start": "lim.js",
+    "dev": "nodemon lim.js"
+  },
+  "keywords": [
+    "bot",
+    "automation",
+    "namso",
+    "airdrop"
+  ],
+  "author": "19Seniman From Insider",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "readline-sync": "^1.4.10",
+    "user-agents": "^1.1.0",
+    "speedtest-net": "^2.2.0",
+    "dotenv": "^16.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
